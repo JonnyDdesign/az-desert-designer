@@ -1,11 +1,10 @@
-/* CSS Reset for cross-browser consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
   
-/* Root variables for easier theming */
+/* Root variables */
 :root {
     --primary-color: #333;
     --secondary-color: #fff;
@@ -13,8 +12,7 @@
     --font-family: 'Arial', sans-serif;
     --transition-speed: 0.3s;
 }
-  
-/* Body styling */
+
 body {
     font-family: var(--font-family);
     line-height: 1.6;
@@ -22,14 +20,14 @@ body {
     background-color: var(--primary-color);
     overflow-x: hidden;
 }
-  
+
 /* Container utility for centering content */
 .container {
     width: 90%;
     margin: 0 auto;
     max-width: 1200px;
 }
-  
+
 /* Navbar Styles */
 .navbar {
     display: flex;
