@@ -1,0 +1,146 @@
+/* CSS Reset for cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+/* Root variables for easier theming */
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --accent-color: #4CAF50;
+    --font-family: 'Arial', sans-serif;
+    --transition-speed: 0.3s;
+}
+  
+/* Body styling */
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+}
+  
+/* Container utility for centering content */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+  
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    position: relative;
+    z-index: 1000;
+}
+  
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+    transition: all var(--transition-speed) ease-in-out;
+}
+  
+.nav-links li {
+    margin: 0 15px;
+}
+  
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    transition: color var(--transition-speed) ease-in-out;
+}
+  
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+  
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: transform var(--transition-speed) ease-in-out;
+}
+  
+/* Hamburger animation */
+.hamburger.active {
+    transform: rotate(90deg);
+}
+  
+/* Dropdown Menu (Mobile) */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--primary-color);
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+  
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--secondary-color);
+    }
+  
+    .nav-links.show {
+        max-height: 300px;
+        transition: max-height var(--transition-speed) ease-in-out;
+    }
+  
+    .hamburger {
+        display: block;
+    }
+}
+  
+/* Accessibility: Focus state for keyboard navigation */
+a:focus {
+    outline: 2px dashed var(--accent-color);
+}
+  
+/* Button Styles (if needed for CTA) */
+button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color var(--transition-speed) ease-in-out;
+}
+  
+button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+  
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+  
+.mb-1 {
+    margin-bottom: 1rem;
+}
+  
+.mt-1 {
+    margin-top: 1rem;
+}  
