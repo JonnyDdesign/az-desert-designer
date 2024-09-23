@@ -10,17 +10,37 @@
 
 /* Text section */
 .text-section {
-    flex: 1;
+    flex: 2;
     padding-right: 20px;
+    margin-left: 30px;
 }
 
 .text-section h1 {
-    font-size: 36px;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .text-section p {
-    font-size: 18px;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: var(--accent-color);
+    color: #f8f8f8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(1rem, 1.8vw, 1.4rem);
+    transition: background-color var(--transition-speed) ease-in-out;
+}
+  
+button:hover {
+    background-color: var(--accent-color-dark);
 }
 
 /* Carousel section */
@@ -107,11 +127,6 @@
     font-size: 1rem;
     line-height: 1.5;
     color: #555;
-}
-  
-.services:hover {
-    background-color: #fff;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .services-link {
