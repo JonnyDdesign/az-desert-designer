@@ -22,6 +22,15 @@ body {
     overflow-x: hidden;
 }
 
+/* Text Styles */
+h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
 /* Navbar Styles */
 .navbar {
     display: flex;
