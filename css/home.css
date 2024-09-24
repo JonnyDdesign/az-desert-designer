@@ -99,29 +99,25 @@ button:hover {
 .services {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     gap: 30px;
-    padding: 40px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 80px 30px;
+    background-color: #FFFFFF;
 }
   
 .services-left {
     flex: 2;
     display: flex;
     flex-direction: column;
-    width: 45%; /* Adjust width as needed */
 }
   
 .services-card {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
   
@@ -155,17 +151,19 @@ button:hover {
 .services-text {
     flex: 1;
     text-align: left;
+    margin: 50px;
 }
   
 .services-text h2 {
     color: #000000;
-    margin-bottom: 15px;
+    margin: 30px 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
   
 .services-text p {
     color: #000000;
+    margin: 30px 10px;
 }
 
 .services-link {
@@ -177,6 +175,92 @@ button:hover {
 .services-link:hover .services-card {
     transform: translate(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonials Section */
+.testimonials {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.testimonials-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    display: none;
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.testimonial-card.active {
+    display: block;
+    opacity: 1;
+}
+
+.client-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.client-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.quote {
+    color: #FFFFFF;
+}
+
+.client-info h3 {
+    color: #FFFFFF;
+}
+
+.client-info p {
+    color: #FFFFFF;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    color: #555;
 }
 
 /* Media query for smaller screens */
