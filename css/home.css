@@ -73,13 +73,15 @@ button:hover {
     width: 700px;
     height: 525px;
     object-fit: cover;
+    position: relative;
 }
 
 .carousel-caption {
-    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 10px;
-    margin-top: 10px;
     text-align: center;
     width: 100%;
 }
