@@ -117,7 +117,7 @@ p {
 /* Footer styling */
 .footer {
     background-color: var(--primary-color);
-    color: #f8f8f8;
+    color: #FFFFFF;
     padding: 40px 0;
     text-align: center;
 }
@@ -135,7 +135,6 @@ p {
 }
 
 .footer-section h2 {
-    font-size: 24px;
     margin-bottom: 15px;
     font-weight: bold;
     text-transform: uppercase;
@@ -144,7 +143,6 @@ p {
 
 .footer-section p,
 .footer-section ul {
-    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 15px;
 }
@@ -175,13 +173,17 @@ p {
     gap: 15px;
 }
 
-.social-links a img {
-    width: 28px;
-    transition: transform 0.3s ease;
+.social-icon {
+    width: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.social-links a img:hover {
-    transform: scale(1.1); /* Scale effect on hover */
+.social-links a:hover img {
+    transform: scale(1.2);
+}
+
+.social-links a[aria-label="Facebook"] img:hover {
+    content: url(/assets/images/facebook-logo-color.svg);
 }
 
 /* Footer bottom */
