@@ -32,6 +32,24 @@ body {
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Domine';
+    src: url('/assets/fonts/Domine-Regular.woff2') format('woff2'),
+         url('/assets/fonts/Domine-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acme';
+    src: url('/assets/fonts/Acme-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Acme-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Text Styles */
 h1 {
     font-size: clamp(1.5rem, 4vw, 4rem);
@@ -39,15 +57,18 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(1.4rem, 3.5vw, 2.3rem);
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    font-family: 'Acme', serif;
 }
 
 h3 {
     font-size: clamp(1.3rem, 3vw, 2rem);
+    font-family: 'Acme', serif;
 }
 
 p {
     font-size: clamp(1rem, 2vw, 1.5rem);
+    font-family: 'Domine';
 }
 
 /* Navbar Styles */
@@ -56,15 +77,15 @@ p {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
-    padding: 1rem;
+    padding: 20px;
     position: relative;
     z-index: 1000;
 }
   
 .logo img {
-    width: 150px;
+    width: 180px;
     height: auto;
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 40px;
 }
   
 .nav-links {
@@ -78,6 +99,7 @@ p {
 }
   
 .nav-links a {
+    font-family: 'Domine', serif;
     color: var(--secondary-color);
     text-decoration: none;
     padding: 10px 15px;
@@ -211,7 +233,7 @@ p {
     background-color: var(--primary-color);
     padding: 15px 0;
     margin-top: 20px;
-    font-size: 14px;
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
     letter-spacing: 0.5px;
 }
   
