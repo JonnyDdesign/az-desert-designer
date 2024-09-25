@@ -190,6 +190,10 @@ p {
     content: url(/assets/images/x-logo-color.svg);
 }
 
+.social-links a[aria-label="Instagram"] img:hover {
+    content: url(/assets/images/instagram-logo-color.svg);
+}
+
 /* Footer bottom */
 .footer-bottom {
     background-color: var(--primary-color);
