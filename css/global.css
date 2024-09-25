@@ -170,7 +170,7 @@ p {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 25px;
 }
 
 .social-icon {
@@ -184,6 +184,10 @@ p {
 
 .social-links a[aria-label="Facebook"] img:hover {
     content: url(/assets/images/facebook-logo-color.svg);
+}
+
+.social-links a[aria-label="Twitter"] img:hover {
+    content: url(/assets/images/x-logo-color.svg);
 }
 
 /* Footer bottom */
