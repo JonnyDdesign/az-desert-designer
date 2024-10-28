@@ -1,0 +1,15 @@
+.about-section {
+    padding: 50px;
+    background-color: var(--accent-color);
+}
+.about-section h1 {
+    text-align: center;
+}
+.about-section p, .about-section ul {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.about-section:nth-child(even) {
+    background-color: var(--primary-color);
+}
