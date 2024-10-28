@@ -1,15 +1,32 @@
-.about-section {
+.about-main {
     padding: 50px;
-    background-color: var(--accent-color);
-}
-.about-section h1 {
     text-align: center;
 }
-.about-section p, .about-section ul {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+
+.about-main p {
+    margin: 20px auto;
+    max-width: 700px;
 }
-.about-section:nth-child(even) {
-    background-color: var(--primary-color);
+
+.about-services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-services ul li {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--accent-color-dark);
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.about-contact a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.about-contact a:hover {
+    text-decoration: underline;
 }
