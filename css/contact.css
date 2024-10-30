@@ -1,0 +1,128 @@
+
+  
+/* Main Container */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+/* Header Section */
+.contact-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.contact-header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+  
+.contact-header p {
+    font-size: 1.1em;
+    color: #555;
+}
+  
+/* Contact Form Section */
+.contact-form-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+  
+.contact-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+  
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+  
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+  
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #2980b9;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.contact-form button:hover {
+    background-color: #3498db;
+}
+  
+/* Contact Information Section */
+.contact-info-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+  
+.contact-info {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+}
+  
+.contact-info h2 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+  
+.contact-info p,
+.contact-info a {
+    font-size: 1em;
+    color: #555;
+    text-decoration: none;
+}
+  
+.contact-info a:hover {
+    color: #2980b9;
+}
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info-section {
+        flex-direction: column;
+    }
+}
+  
+@media (max-width: 480px) {
+    .contact-header h1 {
+        font-size: 2em;
+    }
+  
+    .contact-form-section,
+    .contact-info-section {
+      padding: 10px;
+    }
+}
+  
