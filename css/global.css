@@ -8,6 +8,7 @@
 :root {
     --primary-color: #011627;
     --secondary-color: #FF3366;
+    --secondary-color-light: #FF5C85;
     --accent-color: #2EC4B6;
     --accent-color-dark: #199A87;
     --font-family: 'Arial', sans-serif;

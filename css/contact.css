@@ -10,6 +10,14 @@
     text-align: center;
     margin-bottom: 20px;
 }
+
+.contact-header h1 {
+    padding: 10px;
+}
+
+.contact-header p {
+    padding: 10px;
+}
   
 /* Contact Form Section */
 .contact-form-section {
@@ -21,17 +29,16 @@
 .contact-form {
     background-color: #FFFFFF;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     width: 100%;
     max-width: 600px;
 }
   
 .contact-form label {
+    font-size: clamp(0.8rem, 1vw, 2rem);
     display: block;
     font-weight: bold;
     margin-top: 15px;
-    color: #333;
 }
   
 .contact-form input,
@@ -48,9 +55,9 @@
     width: 100%;
     padding: 12px;
     margin-top: 20px;
-    background-color: #2980b9;
-    color: #ffffff;
-    font-size: 1em;
+    background-color: var(--secondary-color-light);
+    color: #000000;
+    font-size: 1rem;
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -59,7 +66,8 @@
 }
   
 .contact-form button:hover {
-    background-color: #3498db;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
 }
   
 /* Contact Information Section */
@@ -71,17 +79,16 @@
 }
   
 .contact-info {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     flex: 1;
     min-width: 200px;
+    text-align: center;
 }
   
 .contact-info h2 {
     font-size: 1.2em;
-    color: #2c3e50;
     margin-bottom: 10px;
 }
   
