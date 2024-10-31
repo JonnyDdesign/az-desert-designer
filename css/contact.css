@@ -1,8 +1,6 @@
-
-  
 /* Main Container */
 .contact-container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -13,16 +11,6 @@
     margin-bottom: 20px;
 }
   
-.contact-header h1 {
-    font-size: 2.5em;
-    color: #2c3e50;
-}
-  
-.contact-header p {
-    font-size: 1.1em;
-    color: #555;
-}
-  
 /* Contact Form Section */
 .contact-form-section {
     display: flex;
@@ -31,7 +19,7 @@
 }
   
 .contact-form {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

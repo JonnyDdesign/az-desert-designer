@@ -16,7 +16,7 @@
 
 body {
     font-family: var(--font-family);
-    line-height: 1.5;
+    line-height: 1.4;
     color: var(--secondary-color);
     background-color: var(--primary-color);
     overflow-x: hidden;
@@ -85,7 +85,7 @@ p {
 .logo img {
     width: 225px;
     height: auto;
-    padding: 20px 0 0 40px;
+    padding-left: 40px;
 }
   
 .nav-links {
