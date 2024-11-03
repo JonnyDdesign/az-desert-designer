@@ -68,7 +68,7 @@ h3 {
 }
 
 p {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-size: clamp(1rem, 1vw, 2rem);
     font-family: 'Domine';
 }
 
@@ -105,7 +105,7 @@ p {
     color: var(--secondary-color);
     text-decoration: none;
     padding: 10px 15px;
-    font-size: clamp(1rem, 2vw, 1.8rem);
+    font-size: clamp(1rem, 1.5vw, 2rem);
     position: relative;
     transition: color var(--transition-speed) ease-in-out;
 }
@@ -189,7 +189,7 @@ p {
 }
 
 .footer-section ul li {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-size: clamp(1rem, 1vw, 2rem);
     margin-bottom: 10px;
 }
 
@@ -212,7 +212,7 @@ p {
 }
 
 .social-icon {
-    width: 50px;
+    width: 40px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
