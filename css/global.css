@@ -84,7 +84,7 @@ p {
 }
   
 .logo img {
-    width: 225px;
+    width: 220px;
     height: auto;
     padding-left: 40px;
 }
@@ -259,7 +259,7 @@ p {
 /* Media Queries */
 @media (max-width: 1800px) {
     .logo img {
-        width: 200px;
+        width: 180px;
     }
 
     .nav-links {
@@ -273,7 +273,7 @@ p {
 
 @media (max-width: 1440px) {
     .logo img {
-        width: 175px;
+        width: 160px;
     }
 
     .nav-links {
