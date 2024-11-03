@@ -212,24 +212,39 @@ p {
 }
 
 .social-icon {
+    display: inline-block;
     width: 40px;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    height: 40px;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-links a:hover img {
+.facebook-icon {
+    background-image: url(/assets/images/facebook-logo.svg);
+}
+
+.facebook-icon:hover {
+    background-image: url(/assets/images/facebook-logo-color.svg);
     transform: scale(1.2);
 }
 
-.social-links a[aria-label="Facebook"] img:hover {
-    content: url(/assets/images/facebook-logo-color.svg);
+.twitter-icon {
+    background-image: url(/assets/images/x-logo.svg);
 }
 
-.social-links a[aria-label="Twitter"] img:hover {
-    content: url(/assets/images/x-logo-color.svg);
+.twitter-icon:hover {
+    background-image: url(/assets/images/x-logo-color.svg);
+    transform: scale(1.2);
 }
 
-.social-links a[aria-label="Instagram"] img:hover {
-    content: url(/assets/images/instagram-logo-color.svg);
+.instagram-icon {
+    background-image: url(/assets/images/instagram-logo.svg);
+}
+
+.instagram-icon:hover {
+    background-image: url(/assets/images/instagram-logo-color.svg);
+    transform: scale(1.2);
 }
 
 /* Footer bottom */
