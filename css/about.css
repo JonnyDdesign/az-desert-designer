@@ -19,11 +19,9 @@
 }
 
 .about-services {
-    background: linear-gradient(135deg, #FFFFFF, #585893);
+    background: linear-gradient(135deg, #FFFFFF, #2EC4B6);
     padding: 50px;
-    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .about-services h2 {
@@ -50,7 +48,8 @@
     font-weight: 500;
     font-size: 1.1rem;
     cursor: pointer;
-    width: 120px;
+    width: 350px;
+    height: 200px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -65,8 +64,8 @@
 }
 
 .about-services li img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 100px;
     margin-bottom: 0.5rem;
     transition: transform 0.3s;
 }
