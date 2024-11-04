@@ -46,10 +46,10 @@
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     cursor: pointer;
-    width: 350px;
-    height: 200px;
+    width: 375px;
+    height: 300px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -64,9 +64,10 @@
 }
 
 .about-services li img {
-    width: 150px;
-    height: 100px;
-    margin-bottom: 0.5rem;
+    width: 250px;
+    height: 200px;
+    border-radius: 100%;
+    margin-bottom: 2rem;
     transition: transform 0.3s;
 }
 
