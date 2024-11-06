@@ -72,7 +72,16 @@
 }
 
 .about-services li:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.about-services li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
 }
 
 .about-contact {
