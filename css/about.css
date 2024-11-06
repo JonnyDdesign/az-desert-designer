@@ -65,6 +65,7 @@
 .about-services li img {
     width: 300px;
     height: 250px;
+    border: 3px solid #000000;
     border-radius: 100%;
     margin-bottom: 2rem;
     transition: transform 0.3s;
@@ -72,6 +73,7 @@
 
 .about-services li:hover img {
     transform: scale(1.05);
+    border: 3px solid #FF3366;
 }
 
 .about-services li a {
