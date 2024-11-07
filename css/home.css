@@ -319,11 +319,15 @@ button:hover {
 
     .services {
         flex-direction: column-reverse;
-        padding: 40px 30px;
+        padding: 40px;
     }
 
     .services-text {
         margin: 0;
+    }
+
+    .services-text h2 {
+        text-align: center;
     }
 
     .services-icon img {
@@ -333,5 +337,9 @@ button:hover {
 
     .testimonials {
         padding: 50px 0;
+    }
+
+    .testimonial-card.active {
+        padding: 20px 0;
     }
 }
