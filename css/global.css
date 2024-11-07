@@ -140,7 +140,6 @@ p {
     display: none;
     font-size: 3rem;
     color: var(--secondary-color);
-    cursor: pointer;
     transition: transform var(--transition-speed) ease-in-out;
 }
   
@@ -296,6 +295,8 @@ p {
         width: 100%;
         max-height: 0;
         overflow: hidden;
+        transition: max-height var(--transition-speed) ease-in-out;
+        z-index: 1;
     }
   
     .nav-links li {
@@ -306,12 +307,31 @@ p {
   
     .nav-links.show {
         max-height: 300px;
-        transition: max-height var(--transition-speed) ease-in-out;
     }
   
     .hamburger {
         display: block;
         padding-right: 40px;
+        cursor: pointer;
+        font-size: 24px;
+        z-index: 2;
+        transition: all 0.3s;
+    }
+
+    .menu-icon {
+        display: inline-block;
+    }
+
+    .close-icon {
+        display: none;
+    }
+
+    .hamburger.show .menu-icon {
+        display: none;
+    }
+
+    .hamburger.show .close-icon {
+        display: inline-block;
     }
 
     .footer-content {

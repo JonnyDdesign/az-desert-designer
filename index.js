@@ -1,7 +1,10 @@
 // Hamburger Menu Function
 function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
+    const hamburger = document.querySelector('.hamburger');
+
     navLinks.classList.toggle('show');
+    hamburger.classList.toggle('show');
 }
 
 // Image Carousel
