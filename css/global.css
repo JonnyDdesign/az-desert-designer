@@ -7,9 +7,13 @@
 /* Root variables */
 :root {
     --primary-color: #011627;
+    --primary-color-light: #23425A;
+    --primary-color-dark: #000F1A;
     --secondary-color: #FF3366;
     --secondary-color-light: #FF5C85;
+    --secondary-color-dark: #CC2A52;
     --accent-color: #2EC4B6;
+    --accent-color-light: #5FD2C5;
     --accent-color-dark: #199A87;
     --font-family: 'Arial', sans-serif;
     --transition-speed: 0.3s;
