@@ -1,9 +1,27 @@
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 50px 0;
+}
+
 .main-text h1 {
     text-align: center;
 }
 
 .main-text p {
     padding: 20px 100px;
+}
+
+.main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image img {
+    width: 70%;
 }
 
 .services-container {
