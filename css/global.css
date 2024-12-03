@@ -293,7 +293,7 @@ p {
     .nav-links {
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 10px;
         right: 0;
         background-color: var(--primary-color);
         width: 100%;
@@ -305,12 +305,12 @@ p {
   
     .nav-links li {
         text-align: center;
-        padding: 10px 0;
-        border-bottom: 1px solid var(--secondary-color);
+        padding: 15px 0;
     }
   
     .nav-links.show {
         max-height: 300px;
+        background-color: #FFFFFF;
     }
   
     .hamburger {
@@ -336,6 +336,8 @@ p {
 
     .hamburger.show .close-icon {
         display: inline-block;
+        position: absolute;
+        top: 10px;
     }
 
     .footer-content {
