@@ -1,24 +1,26 @@
 .about-main {
-    padding: 50px;
-    text-align: center;
-    background-color: #FFFFFF;
+    background-image: url(/assets/images/about-az-desert-designer-background.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-radius: 10px;
+    height: 1000px;
+}
+
+.about-main h1 {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    color: #FFFFFF;
 }
 
 .about-main p {
+    position: absolute;
+    top: 450px;
+    left: 50px;
+    color: #FFFFFF;
     margin: 20px auto;
-    max-width: 700px;
-    text-align: left;
-}
-
-.about-story {
-    padding: 50px;
-    text-align: center;
-}
-
-.about-story p {
-    margin: 20px auto;
-    max-width: 700px;
+    max-width: 1500px;
     text-align: left;
 }
 
@@ -106,4 +108,10 @@
 
 .about-contact a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 1440px) {
+    .about-main p {
+        max-width: 700px;
+    }
 }
