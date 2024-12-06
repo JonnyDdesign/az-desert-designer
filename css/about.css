@@ -33,15 +33,15 @@
 }
 
 .about-services h2 {
-    font-weight: bold;
     margin-bottom: 40px;
+    font-size: 1.5rem;
 }
 
 .about-services ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -155,9 +155,27 @@
         max-width: 900px;
         font-size: 0.9rem;
     }
+
+    .about-services li {
+        width: 400px;
+        height: 300px;
+    }
+
+    .about-services li img {
+        width: 220px;
+        height: 170px;
+        border: 3px solid #000000;
+        border-radius: 100%;
+        margin-bottom: 2rem;
+        transition: transform 0.3s;
+    }
+
+    .about-services li a {
+        font-size: 1.2rem;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 610px) {
     .about-main p {
         top: 220px;
         font-size: 0.7rem;
