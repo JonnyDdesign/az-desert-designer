@@ -132,8 +132,34 @@
     .about-main p {
         top: 300px;
         left: 50px;
-        margin: 20px auto;
-        padding-right: 150px;
+        padding-right: 200px;
         max-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-main {
+        background-image: url(/assets/images/about-az-desert-designer-background-small.webp);
+        height: 500px;
+    }
+
+    .about-main h1 {
+        top: 180px;
+        left: 50px;
+    }
+
+    .about-main p {
+        top: 240px;
+        left: 50px;
+        padding-right: 200px;
+        max-width: 900px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-main p {
+        top: 220px;
+        font-size: 0.7rem;
     }
 }
