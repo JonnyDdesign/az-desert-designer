@@ -181,3 +181,22 @@
         font-size: 0.7rem;
     }
 }
+
+@media (max-width: 425px) {
+    .about-main {
+        background-image: url(/assets/images/about-az-desert-designer-background-mobile.webp);
+        height: 400px;
+    }
+
+    .about-main h1 {
+        top: 170px;
+        left: 30px;
+    }
+
+    .about-main p {
+        top: 210px;
+        left: 30px;
+        font-size: 0.6rem;
+        padding-right: 100px;
+    }
+}
