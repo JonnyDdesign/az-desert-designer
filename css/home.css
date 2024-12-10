@@ -343,3 +343,33 @@ button:hover {
         padding: 20px 0;
     }
 }
+
+@media (max-width: 768px) {
+    .main-section {
+        padding: 30px;
+    }
+
+    .carousel-section {
+        max-width: 400px;
+    }
+
+    .carousel-slide img {
+        width: 400px;
+        height: 275px;
+    }
+}
+
+@media (max-width: 425px) {
+    .main-section {
+        padding: 25px;
+    }
+
+    .carousel-section {
+        max-width: 300px;
+    }
+
+    .carousel-slide img {
+        width: 275px;
+        height: 175px;
+    }
+}
