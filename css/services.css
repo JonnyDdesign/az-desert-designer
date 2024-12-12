@@ -35,15 +35,19 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 8);
 }
 
-/* Services section - Card grid */
+/* Services section */
 .services-section {
     padding: 50px;
 }
 
 .services-grid {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.services-grid a {
+    text-decoration: none;
 }
 
 .service-card {
