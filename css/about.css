@@ -42,7 +42,6 @@
     padding: 0;
     display: flex;
     gap: 4rem;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -96,7 +95,7 @@
 }
 
 .about-contact {
-    padding: 50px;
+    padding: 40px;
     text-align: center;
 }
 
