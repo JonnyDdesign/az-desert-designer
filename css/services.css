@@ -40,13 +40,13 @@
     padding: 50px;
 }
 
-.services-grid {
+.services-flex {
     display: flex;
     gap: 20px;
     justify-content: space-around;
 }
 
-.services-grid a {
+.services-flex a {
     text-decoration: none;
 }
 
@@ -111,18 +111,40 @@
         padding: 50px 80px;
     }
 
-    .services-grid {
+    .services-flex {
         gap: 50px;
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 865px) {
+    .services-section {
+        padding: 50px;
+    }
+
+    .services-flex {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 435px) {
+    .main-section {
+        padding: 30px;
+    }
+
+    .main-text h1 {
+        text-align: center;
+    }
+
+    .main-image img {
+        width: 100%;
+    }
+
     .services-section {
         padding: 30px;
     }
 
-    .services-grid {
+    .services-flex {
         gap: 50px;
     }
 
