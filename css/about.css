@@ -198,4 +198,12 @@
         font-size: 0.6rem;
         padding-right: 100px;
     }
+
+    .about-services {
+        padding: 20px;
+    }
+
+    .about-services ul {
+        gap: 2rem;
+    }
 }

@@ -14,6 +14,7 @@
     --secondary-color-dark: #CC2A52;
     --accent-color: #2EC4B6;
     --accent-color-light: #5FD2C5;
+    --accent-color-supalight: #EBFBFA;
     --accent-color-dark: #199A87;
     --font-family: 'Arial', sans-serif;
     --transition-speed: 0.3s;
@@ -62,7 +63,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
     font-family: 'Acme', serif;
 }
 

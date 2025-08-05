@@ -31,7 +31,7 @@
 }
 
 .services-container {
-    background-color: #f4f4f4;
+    background-color: var(--accent-color-supalight);
     padding: 40px 20px 60px 20px;
     text-align: center;
     display: flex;
@@ -150,6 +150,6 @@
     }
 
     .services-container {
-        padding: 30px;
+        padding: 20px;
     }
 }
