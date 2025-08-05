@@ -8,12 +8,14 @@
 
 .main-text h1 {
     padding-left: 50px;
+    font-size: clamp(2.5rem, 5vw, 5rem);
 }
 
 .main-text p {
     font-size: 1.3rem;
     padding: 20px 50px;
-    line-height: 1.7;
+    line-height: 1.6;
+    color: #FFFFFF;
 }
 
 .main-image {
@@ -109,7 +111,6 @@
 
     .main-text h1 {
         text-align: center;
-        font-size: 3rem;
         padding-left: 0;
     }
 
@@ -132,10 +133,10 @@
 }
 
 @media (max-width: 768px) {
-    .main-text h1 {
-        font-size: 2.4rem;
+    .main-section {
+        margin: 20px 0;
     }
-
+    
     .services-container {
         padding: 40px;
     }
@@ -146,8 +147,9 @@
 }
 
 @media (max-width: 500px) {
-    .main-text h1 {
-        font-size: 2rem;
+    .main-text p {
+        font-size: 1.1rem;
+        padding: 20px;
     }
 
     .services-container {
