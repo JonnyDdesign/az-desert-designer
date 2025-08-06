@@ -65,12 +65,12 @@
 
 .service h3 {
     font-size: 1.8em;
-    color: var(--secondary-color);
+    color: #FFFFFF;
     margin-bottom: 10px;
+    text-decoration: underline;
 }
 
 .service p {
-    font-size: 1rem;
     color: #FFFFFF;
     line-height: 1.5;
 }
@@ -135,7 +135,7 @@
     }
 
     .service .image img {
-        width: 20%;
+        width: 30%;
     }
 }
 

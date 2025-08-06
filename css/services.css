@@ -43,8 +43,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .services-section h2 {
@@ -177,7 +175,6 @@
     .services-section {
         padding: 20px 20px 40px 20px;
         border-bottom: 10px dotted var(--secondary-color);
-        border-radius: 0;
     }
 
     .services-section h2 {
