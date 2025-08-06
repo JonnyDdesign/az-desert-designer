@@ -73,8 +73,8 @@ h3 {
 }
 
 p {
-    font-size: clamp(1rem, 1.1vw, 2rem);
-    font-family: 'Domine';
+    font-size: clamp(0.9rem, 1.1vw, 2rem);
+    font-family: 'Domine', sans-serif;
 }
 
 /* Navbar Styles */
@@ -174,7 +174,8 @@ p {
 }
 
 .footer-section h2 {
-    font-size: clamp(1.1rem, 3vw, 2rem);
+    color: var(--secondary-color-light);
+    font-size: clamp(1.3rem, 3vw, 2rem);
     margin-bottom: 15px;
     font-weight: bold;
     text-transform: uppercase;

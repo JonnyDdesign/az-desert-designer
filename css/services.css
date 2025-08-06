@@ -143,6 +143,10 @@
 }
 
 @media (max-width: 865px) {
+    .main-image img {
+        width: 90%;
+    }
+
     .services-section {
         padding: 50px;
     }
