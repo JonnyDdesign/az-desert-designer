@@ -147,7 +147,7 @@
     }
 
     .main-image img {
-        width: 50%;
+        width: 90%;
     }
 
     .services-container {
@@ -169,6 +169,11 @@
         padding: 20px;
     }
 
+    .cta-btn {
+        display: block;
+        margin: 1rem auto;
+    }
+
     .services-container {
         padding: 40px;
     }
@@ -186,5 +191,9 @@
 
     .services-container {
         padding: 30px;
+    }
+
+    .cta-wrapper {
+        text-align: center;
     }
 }
