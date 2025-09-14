@@ -1,21 +1,20 @@
-/* Hero Section */
+/* Hero section */
 .portfolio-hero {
     text-align: center;
     padding: 4rem 2rem;
-    background: var(--accent-color-supalight);
-    border-bottom: 3px solid var(--primary-color);
+    background: var(--primary-color);
 }
 
 .portfolio-hero h1 {
     font-size: clamp(2.5rem, 6vw, 4rem);
-    color: var(--primary-color);
+    color: var(--secondary-color-light);
     margin-bottom: 1rem;
 }
 
 .portfolio-hero h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 500;
-    color: var(--secondary-color);
+    color: var(--secondary-color-light);
     margin-bottom: 1rem;
 }
 
@@ -24,24 +23,25 @@
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
-    color: #333;
+    color: #FFFFFF;
 }
 
-/* Portfolio Grid */
+/* Portfolio grid */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
     gap: 1rem;
     margin: 2rem auto;
-    max-width: 1200px;
+    max-width: 1600px;
     padding: 0 1rem;
 }
 
-/* Portfolio Items */
+/* Portfolio items */
 .portfolio-item {
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
@@ -65,7 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #ffffff;
     font-size: 2rem;
     font-weight: bold;
     background: rgba(1, 22, 39, 0.2);
@@ -87,6 +87,11 @@
     .portfolio-grid {
         grid-template-columns: 1fr;
         gap: 0.5rem;
+        padding: 0;
+    }
+
+    .portfolio-item {
+        border-radius: 0;
     }
 
     .portfolio-overlay {
