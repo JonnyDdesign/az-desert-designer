@@ -7,6 +7,7 @@ function toggleMenu() {
     hamburger.classList.toggle('show');
 }
 
+
 // Image Carousel
 const carousel = document.getElementById('carousel');
 let currentIndex = 0;
@@ -63,4 +64,32 @@ document.addEventListener('DOMContentLoaded', function() {
         currentIndex = (currentIndex + 1) % cards.length;
         showCard(currentIndex);
     }, 5000); // 5000ms = 5 seconds
+});
+
+
+// Lightbox Gallery
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    document.body.appendChild(lightbox);
+
+    const images = document.querySelectorAll('.portfolio-grid img');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.classList.add('active');
+            const lightboxImg = document.createElement('img');
+            lightboxImg.src = img.src;
+
+            //Clear previous image before appending
+            while (lightbox.firstChild) {
+                lightbox.removeChild(lightbox.firstChild);
+            }
+            lightbox.appendChild(lightboxImg);
+        });
+    });
+
+    lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
 });
