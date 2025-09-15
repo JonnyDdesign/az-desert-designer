@@ -69,27 +69,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Lightbox Gallery
 document.addEventListener('DOMContentLoaded', function() {
-    const lightbox = document.createElement('div');
-    lightbox.id = 'lightbox';
-    document.body.appendChild(lightbox);
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.querySelector('.lightbox-img');
+    const closeBtn = document.querySelector('.close');
 
-    const images = document.querySelectorAll('.portfolio-grid img');
+    const images = document.querySelectorAll('.gallery-grid img');
 
     images.forEach(img => {
         img.addEventListener('click', () => {
-            lightbox.classList.add('active');
-            const lightboxImg = document.createElement('img');
-            lightboxImg.src = img.src;
-
-            //Clear previous image before appending
-            while (lightbox.firstChild) {
-                lightbox.removeChild(lightbox.firstChild);
+            if (img.src) {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
             }
-            lightbox.appendChild(lightboxImg);
         });
     });
 
-    lightbox.addEventListener('click', () => {
-        lightbox.classList.remove('active');
+    closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+            lightbox.style.display = 'none';
+            lightboxImg.src = '';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+            lightboxImg.src = '';
+        }
     });
 });
