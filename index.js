@@ -67,34 +67,77 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Lightbox Gallery
+// Lightbox Gallery With Keyboard Support
 document.addEventListener('DOMContentLoaded', function() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.querySelector('.lightbox-img');
     const closeBtn = document.querySelector('.close');
 
     const images = document.querySelectorAll('.gallery-grid img');
+    let currentIndex = -1;
 
-    images.forEach(img => {
+    // Open lightbox on image click
+    images.forEach((img, index) => {
         img.addEventListener('click', () => {
             if (img.src) {
                 lightbox.style.display = 'flex';
                 lightboxImg.src = img.src;
                 lightboxImg.alt = img.alt;
+                currentIndex = index;
             }
         });
     });
 
+    // Close on x click
     closeBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-            lightbox.style.display = 'none';
-            lightboxImg.src = '';
+        closeLightbox();
     });
 
+    //Close when clicking outside the image
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
-            lightbox.style.display = 'none';
-            lightboxImg.src = '';
+            closeLightbox();
         }
     });
+
+    // Keyboard support
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.style.display === 'flex') {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                showNextImage();
+            } else if (e.key === 'ArrowLeft') {
+                showPrevImage();
+            }
+        }
+    })
+
+    // Helper functions
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+        currentIndex = -1;
+    }
+
+    function showNextImage() {
+        if (currentIndex >= 0) {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateLightboxImage();
+        }
+    }
+
+    function showPrevImage() {
+        if (currentIndex >= 0) {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateLightboxImage();
+        }
+    }
+
+    function updateLightboxImage() {
+        const img = images[currentIndex];
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+    }
 });
