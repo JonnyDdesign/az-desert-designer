@@ -112,8 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
         function updateLightboxImage() {
             const img = galleryImages[galleryCurrentIndex];
             if (!img) return;
-            // Use the src attribute (relative paths remain as intended)
-            lightboxImg.src = img.getAttribute('src');
+            // Use data-large if it exists, otherwise fallback to src
+            const largeSrc = img.getAttribute('data-large') || img.getAttribute('src');
+            lightboxImg.src = largeSrc;
             lightboxImg.alt = img.getAttribute('alt') || '';
         }
 

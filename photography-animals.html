@@ -54,7 +54,14 @@
 
     <section class="gallery-grid">
         <div class="grid-item one">
-            <img src="/assets/images/portfolio-images/bird-800.webp" alt="Animal photo 1">
+            <picture>
+                <source srcset="/assets/images/portfolio-images/bird-400.webp" media="(max-width: 768px)" type="image/webp">
+                <source srcset="/assets/images/portfolio-images/bird-800.webp" media="(max-width: 1440px)" type="image/webp">
+                <img src="/assets/images/portfolio-images/bird-800.webp"
+                     alt="close-up view of an Emu"
+                     data-large="/assets/images/portfolio-images/bird-800.webp"
+                     width="800" height="1210">
+            </picture>
         </div>
         <div class="grid-item two">
             <img src="/assets/images/portfolio-images/giraffe-800.webp" alt="Animal photo 2">
