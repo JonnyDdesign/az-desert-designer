@@ -1,109 +1,170 @@
-// Hamburger Menu Function
 function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     const hamburger = document.querySelector('.hamburger');
-
+    if (!navLinks || !hamburger) return;
     navLinks.classList.toggle('show');
     hamburger.classList.toggle('show');
 }
 
+document.addEventListener('DOMContentLoaded', () => {
 
-// Image Carousel
-const carousel = document.getElementById('carousel');
-let currentIndex = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const totalSlides = slides.length;
+    // -----------------------
+    // Image Carousel (if present)
+    // -----------------------
+    (function initCarousel() {
+        const carouselEl = document.getElementById('carousel');
+        if (!carouselEl) return;
 
-function showNextSlide() {
-    currentIndex++;
-    if (currentIndex >= totalSlides) {
-        currentIndex = 0;
-    }
-    const translateX = -currentIndex * 100; // Slide to the next image
-    carousel.style.transform = `translateX(${translateX}%)`;
-}
+        const slides = carouselEl.querySelectorAll('.carousel-slide');
+        if (!slides || slides.length === 0) return;
 
-// Auto-slide every 5 seconds
-setInterval(showNextSlide, 5000);
+        let carouselIndex = 0;
+        const totalSlides = slides.length;
 
-
-// Testimonial Carousel
-document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.testimonial-card');
-    let currentIndex = 0;
-
-    // Show the first testimonial card
-    cards[currentIndex].classList.add('active');
-
-    // Function to show a specific card
-    function showCard(index) {
-        cards.forEach((card, i) => {
-            card.classList.remove('active');
-            card.style.display = 'none'; // Hide all cards
-            if (i === index) {
-                card.classList.add('active');
-                card.style.display = 'block'; // Only show the active card
-            }
-        });
-    }
-
-    // Next button click
-    document.querySelector('.carousel-next').addEventListener('click', function() {
-        currentIndex = (currentIndex + 1) % cards.length;
-        showCard(currentIndex);
-    });
-
-    // Previous button click
-    document.querySelector('.carousel-prev').addEventListener('click', function() {
-        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-        showCard(currentIndex);
-    });
-
-    // Optional: Autoplay carousel (3 seconds delay)
-    setInterval(function() {
-        currentIndex = (currentIndex + 1) % cards.length;
-        showCard(currentIndex);
-    }, 5000); // 5000ms = 5 seconds
-});
-
-
-// Lightbox Gallery With Keyboard Support
-document.addEventListener('DOMContentLoaded', function() {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.querySelector('.lightbox-img');
-    const closeBtn = document.querySelector('.close');
-
-    const images = document.querySelectorAll('.gallery-grid img');
-    let currentIndex = -1;
-
-    // Open lightbox on image click
-    images.forEach((img, index) => {
-        img.addEventListener('click', () => {
-            if (img.src) {
-                lightbox.style.display = 'flex';
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                currentIndex = index;
-            }
-        });
-    });
-
-    // Close on x click
-    closeBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        closeLightbox();
-    });
-
-    //Close when clicking outside the image
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            closeLightbox();
+        function showNextSlide() {
+            carouselIndex = (carouselIndex + 1) % totalSlides;
+            carouselEl.style.transform = `translateX(${-carouselIndex * 100}%)`;
         }
-    });
 
-    // Keyboard support
-    document.addEventListener('keydown', (e) => {
-        if (lightbox.style.display === 'flex') {
+        // Ensure initial state
+        carouselEl.style.transform = 'translateX(0%)';
+
+        // Auto-slide every 5 seconds
+        setInterval(showNextSlide, 5000);
+    })();
+
+
+    // -----------------------
+    // Testimonial Carousel (if present)
+    // -----------------------
+    (function initTestimonials() {
+        const cards = document.querySelectorAll('.testimonial-card');
+        if (!cards || cards.length === 0) return;
+
+        let testimonialIndex = 0;
+
+        function showCard(index) {
+            cards.forEach((card, i) => {
+                card.classList.toggle('active', i === index);
+                card.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        showCard(testimonialIndex);
+
+        const nextBtn = document.querySelector('.carousel-next');
+        const prevBtn = document.querySelector('.carousel-prev');
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                testimonialIndex = (testimonialIndex + 1) % cards.length;
+                showCard(testimonialIndex);
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                testimonialIndex = (testimonialIndex - 1 + cards.length) % cards.length;
+                showCard(testimonialIndex);
+            });
+        }
+
+        // Optional autoplay (5s)
+        setInterval(() => {
+            testimonialIndex = (testimonialIndex + 1) % cards.length;
+        showCard(testimonialIndex);
+        }, 5000);
+    })();
+
+
+    // -----------------------
+    // Lightbox Gallery (if present)
+    // -----------------------
+    (function initLightbox() {
+        // Select all images, but filter out images with empty src attributes
+        const galleryImages = Array.from(document.querySelectorAll('.gallery-grid img'))
+            .filter(img => img.getAttribute('src') && img.getAttribute('src').trim() !== '');
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.querySelector('.lightbox-img');
+        if (!galleryImages.length || !lightbox || !lightboxImg) return;
+
+        const closeBtn = lightbox.querySelector('.close');
+        const prevBtn = lightbox.querySelector('.prev');
+        const nextBtn = lightbox.querySelector('.next');
+
+        let galleryCurrentIndex = -1;
+
+        function openLightbox(idx) {
+            galleryCurrentIndex = idx;
+            updateLightboxImage();
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // prevent background scroll
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+            lightboxImg.src = '';
+            galleryCurrentIndex = -1;
+            document.body.style.overflow = '';
+        }
+
+        function updateLightboxImage() {
+            const img = galleryImages[galleryCurrentIndex];
+            if (!img) return;
+            // Use the src attribute (relative paths remain as intended)
+            lightboxImg.src = img.getAttribute('src');
+            lightboxImg.alt = img.getAttribute('alt') || '';
+        }
+
+        function showNextImage() {
+            if (galleryCurrentIndex < 0) return;
+            galleryCurrentIndex = (galleryCurrentIndex + 1) % galleryImages.length;
+            updateLightboxImage();
+        }
+
+        function showPrevImage() {
+            if (galleryCurrentIndex < 0) return;
+            galleryCurrentIndex = (galleryCurrentIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateLightboxImage();
+        }
+
+        // Click thumbnails to open (only real images, filtered)
+        galleryImages.forEach((img, idx) => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => openLightbox(idx));
+        });
+
+        // Close button (X)
+        if (closeBtn) {
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeLightbox();
+            });
+        }
+
+        // Prev / Next arrow buttons (in-lightbox)
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showPrevImage();
+            });
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showNextImage();
+            });
+        }
+
+        // Click outside image closes
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+        // Keyboard support
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.style.display !== 'flex') return;
             if (e.key === 'Escape') {
                 closeLightbox();
             } else if (e.key === 'ArrowRight') {
@@ -111,33 +172,23 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (e.key === 'ArrowLeft') {
                 showPrevImage();
             }
-        }
-    })
+        });
 
-    // Helper functions
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-        lightboxImg.src = '';
-        currentIndex = -1;
-    }
+        // Touch swipe (minimal)
+            let touchStartX = 0;
+            let touchEndX = 0;
+            lightbox.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+            lightbox.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchEndX - touchStartX;
+                if (Math.abs(diff) > 40) {
+                    if (diff < 0) showNextImage();
+                    else showPrevImage();
+                }
+            }, { passive: true });
 
-    function showNextImage() {
-        if (currentIndex >= 0) {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateLightboxImage();
-        }
-    }
+    })();
 
-    function showPrevImage() {
-        if (currentIndex >= 0) {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            updateLightboxImage();
-        }
-    }
-
-    function updateLightboxImage() {
-        const img = images[currentIndex];
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-    }
-});
+}); // end DOMContentLoaded
