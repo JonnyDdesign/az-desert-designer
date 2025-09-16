@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="css/global.css?v=1.0">
     <link rel="stylesheet" href="css/photography-animals.css?v=1.0">
     <link rel="canonical" href="https://www.azdesertdesigner.com/photography-animals.html" />
-    <!-- Google tag (gtag.js) -->
+    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYQZF57DJ5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -64,7 +65,14 @@
             </picture>
         </div>
         <div class="grid-item two">
-            <img src="/assets/images/portfolio-images/giraffe-800.webp" alt="Animal photo 2">
+            <picture>
+                <source srcset="/assets/images/portfolio-images/giraffe-400.webp" media="(max-width: 768px)" type="image/webp">
+                <source srcset="/assets/images/portfolio-images/giraffe-800.webp" media="(max-width: 1440px)" type="image/webp">
+                <img src="/assets/images/portfolio-images/giraffe-800.webp"
+                     alt="close-up side view of a giraffe"
+                     data-large="/assets/images/portfolio-images/giraffe-800.webp"
+                     width="800" height="617">
+            </picture>
         </div>
         <div class="grid-item three">
             <img src="" alt="Animal photo 3">
