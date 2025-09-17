@@ -4,80 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="We offer creative, modern, and user-friendly design solutions that make your business stand out. Contact us for custom web and graphic design services.">
-    <meta name="keywords" content="web design, graphic design, creative design, UI/UX, modern design, design agency, design, designer">
+
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="AZ Desert Designer offers creative, modern, and user-friendly web and graphic design solutions in Arizona. Make your business stand out with custom design services.">
     <meta name="author" content="AZ Desert Designer">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Creative and Modern Design Solutions">
-    <meta property="og:description" content="Offering unique web and graphic design solutions that make your brand stand out.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="AZ Desert Designer | Creative Web and Graphic Design in Arizona">
+    <meta property="og:description" content="We design modern, user-friendly websites and graphics that make your brand stand out. Serving Arizona and beyond.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.azdesertdesigner.com/" />
+    <meta property="og:url" content="https://www.azdesertdesigner.com">
     <meta property="og:image" content="">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="AZ Desert Designer">
-    <title>Creative and Modern Design Solutions | AZ Desert Designer</title>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AZ Desert Designer | Creative Web & Graphic Design in Arizona">
+    <meta name="twitter:description" content="We design modern, user-friendly websites and graphics that make your brand stand out.">
+    <meta name="twitter:image" content="">
+
+
+    <title>AZ Desert Designer | Creative and Modern Design Solutions</title>
     <link rel="icon" type="image/webp" href="assets/images/az-desert-designer-favicon.svg">
-    <style>
-        /* Reset & basic styles */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; line-height: 1.4; color: #FF3366; background-color: #011627; overflow-x: hidden; }
+    <link rel="canonical" href="https://www.azdesertdesigner.com">
 
-        /* Navbar */
-        .navbar { display: flex; justify-content: space-between; align-items: center; background-color: #011627; padding: 20px; position: relative; z-index: 1000; }
-        .logo img { width: 220px; height: auto; padding-left: 40px; }
-        .nav-links { list-style: none; display: flex; padding-right: 40px; }
-        .nav-links li { margin: 0 40px; }
-        .nav-links a { font-family: 'Domine', serif; color: #FF3366; text-decoration: none; padding: 10px 15px; font-size: clamp(1rem, 1.5vw, 2rem); position: relative; transition: color 0.3s ease; }
-        .nav-links a::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background-color: #2EC4B6; transform: scaleX(0); transform-origin: center; transition: transform 0.3s ease; }
-        .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(0.8); background-color: #FF3366; }
-        .hamburger { display: none; font-size: 3rem; color: #FF3366; transition: transform 0.3s ease; }
+    <!-- Fonts -->
+    <link rel="preload" href="assets/fonts/BubblegumSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Domine-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Acme-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
-        /* Main section */
-        .main-section { display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 20px 60px; margin-top: 20px; background-color: var(--primary-color); }
-        .text-section { flex: 2; padding-right: 40px; }
-        .text-section h1 { font-weight: bold; margin-bottom: 30px; }
-        .text-section p { margin-bottom: 20px; letter-spacing: 1px; }
-        button { padding: 10px 20px; margin: 20px 0; background-color: var(--accent-color); color: #000000; border: none; border-radius: 5px; cursor: pointer; font-size: clamp(1rem, 1.8vw, 1.6rem); transition: background-color var(--transition-speed) ease-in-out; }
-
-        /* Carousel */
-        .carousel-section { flex: 1 1 400px; max-width: 600px; }
-        .carousel-slide img { width: 100%; display: block; }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-        .navbar { padding: 10px; }
-        .logo img { width: 120px; }
-        .nav-links { flex-direction: column; position: absolute; margin-top: 100px; right: 0; background-color: #011627; width: 100%; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; z-index: 1; }
-        .nav-links li { text-align: center; padding: 15px 0; }
-        .hamburger { display: block; padding-right: 40px; cursor: pointer; font-size: 36px; z-index: 2; }
-        }
-
-        @media (max-width: 768px) {
-        .main-section { padding: 30px; }
-        .carousel-section { max-width: 400px; }
-        .carousel-slide img { width: 400px; height: 275px; }
-        .carousel-prev, .carousel-next { font-size: 2rem; }
-        }
-
-        @media (max-width: 435px) {
-        .logo img { width: 90px; padding-left: 20px; }
-        }
-
-        @media (max-width: 435px) {
-        .main-section { padding: 25px; }
-        .carousel-section { max-width: 300px; }
-        .carousel-slide img { width: 275px; height: 175px; }
-        }
-    </style>
-    <link rel="stylesheet" href="css/global.css?v=1.0">
-    <link rel="stylesheet" href="css/home.css?v=1.0">
-    <link rel="canonical" href="https://www.azdesertdesigner.com/" />
-    <!-- Google tag (gtag.js) -->
+    <!-- CSS -->
+    <link rel="preload" href="css/global.css?v=1.1" as="style">
+    <link rel="preload" href="css/home.css?v=1.1" as="style">
+    <link rel="stylesheet" href="css/global.css?v=1.1">
+    <link rel="stylesheet" href="css/home.css?v=1.1">
+    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYQZF57DJ5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-CYQZF57DJ5');
+    </script>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AZ Desert Designer",
+        "url": "https://www.azdesertdesigner.com",
+        "logo": "https://www.azdesertdesigner.com/assets/images/az-desert-designer-logo.svg"
+    }
     </script>
 </head>
 
