@@ -82,6 +82,39 @@
     margin-right: 0.5rem;
 }
 
+.about-break {
+    position: relative;
+    background: url(/assets/images/desert-break-desktop.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-break .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 60px 20px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.about-break h2 {
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.about-break p {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .about-services {
     background: linear-gradient(180deg, #011627, #FFFFFF);
     padding: 2rem;
@@ -196,6 +229,11 @@
         font-size: 0.9rem;
     }
 
+    .about-break {
+        background: url(/assets/images/desert-break-tablet.webp);
+        min-height: 350px;
+    }
+
     .about-services li {
         width: 400px;
         height: 300px;
@@ -238,6 +276,11 @@
         left: 30px;
         font-size: 0.6rem;
         padding-right: 100px;
+    }
+
+    .about-break {
+        background: url(/assets/images/desert-break-mobile.webp);
+        min-height: 300px;
     }
 
     .about-services {
