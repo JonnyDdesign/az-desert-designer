@@ -96,9 +96,9 @@
 }
 
 .about-break .overlay {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.8);
     padding: 60px 20px;
-    border-radius: 12px;
+    border-radius: 8px;
     display: inline-block;
 }
 
@@ -232,6 +232,7 @@
     .about-break {
         background: url(/assets/images/desert-break-tablet.webp);
         min-height: 350px;
+        background-position: center;
     }
 
     .about-services li {
@@ -281,6 +282,23 @@
     .about-break {
         background: url(/assets/images/desert-break-mobile.webp);
         min-height: 300px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .about-break .overlay {
+        padding: 20px;
+    }
+
+    .about-break h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-break p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .about-services {
