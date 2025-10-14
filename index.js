@@ -9,32 +9,6 @@ function toggleMenu() {
 document.addEventListener('DOMContentLoaded', () => {
 
     // -----------------------
-    // Image Carousel (if present)
-    // -----------------------
-    (function initCarousel() {
-        const carouselEl = document.getElementById('carousel');
-        if (!carouselEl) return;
-
-        const slides = carouselEl.querySelectorAll('.carousel-slide');
-        if (!slides || slides.length === 0) return;
-
-        let carouselIndex = 0;
-        const totalSlides = slides.length;
-
-        function showNextSlide() {
-            carouselIndex = (carouselIndex + 1) % totalSlides;
-            carouselEl.style.transform = `translateX(${-carouselIndex * 100}%)`;
-        }
-
-        // Ensure initial state
-        carouselEl.style.transform = 'translateX(0%)';
-
-        // Auto-slide every 5 seconds
-        setInterval(showNextSlide, 5000);
-    })();
-
-
-    // -----------------------
     // Testimonial Carousel (if present)
     // -----------------------
     (function initTestimonials() {
