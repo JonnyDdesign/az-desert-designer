@@ -69,43 +69,48 @@
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="assets/images/az-desert-designer-logo.svg" alt="AZ Desert Designer Logo"></a>
-        </div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html" class="active">ABOUT</a></li>
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span class="menu-icon">&#9776;</span>
-            <span class="close-icon">&times;</span>
-        </div>
-    </nav>
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/az-desert-designer-logo.svg" alt="AZ Desert Designer Logo">
+                </a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html" class="active" aria-current="page">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+                <span class="menu-icon">&#9776;</span>
+                <span class="close-icon">&times;</span>
+            </div>
+        </nav>
 
-    <main class="about-main">
-        <h1>About AZ Desert Designer</h1>
-        <p>AZ Desert Designer specializes in crafting custom web designs that blend creativity with functionality inspired by the beauty and resilience of the Arizona desert. Based in the heart of Arizona, we bring your vision to life with tailored solutions that capture your brand’s uniqueness. From sleek designs to seamless user experiences, AZ Desert Designer is your partner in building impactful design solutions.</p>
-    </main>
+        <div class="hero-content">
+            <h1>About AZ Desert Designer</h1>
+            <p>As a native Arizonan, I’ve always been inspired by the rugged beauty and resilience of the desert. At AZ Desert Designer, I bring that same appreciation for nature into every project, creating water-conscious landscapes that celebrate the local environment while enhancing the way people live outdoors. My goal is to design spaces that feel natural, sustainable, and uniquely connected to the Arizona landscape.</p>
+        </div>
+    </header>
 
     <section class="about-mission-values">
-        <h2>Our Mission, Story & Values</h2>
+        <h2>Mission, Story & Values</h2>
         <div class="mission-grid">
     
             <div class="mission-card">
-                <h3>Our Mission</h3>
+                <h3>Mission</h3>
                 <p>At AZ Desert Designer, our mission is to craft purposeful designs that inspire and connect. We blend creativity, strategy, and functionality to help brands grow with confidence.</p>
             </div>
 
             <div class="mission-card">
-                <h3>Our Story</h3>
+                <h3>Story</h3>
                 <p>Founded in the heart of Arizona, AZ Desert Designer draws inspiration from the desert’s resilience and beauty. What began as a passion for design has grown into a studio that partners with businesses big and small to create meaningful digital experiences.</p>
             </div>
 
             <div class="mission-card">
-                <h3>Our Values</h3>
+                <h3>Values</h3>
                 <ul>
                     <li><strong>Creativity:</strong> We push boundaries with fresh ideas.</li>
                     <li><strong>Collaboration:</strong> We believe the best work comes from teamwork.</li>
@@ -159,6 +164,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>

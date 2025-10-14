@@ -1,27 +1,38 @@
-.about-main {
-    background-image: url(/assets/images/about-az-desert-designer-background.webp);
-    background-repeat: no-repeat;
-    background-position: center;
+/* Hero section */
+.hero-section {
+    position: relative;
+    background-image: url('/assets/images/about-az-desert-designer-background.webp');
     background-size: cover;
-    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.about-main h1 {
-    position: absolute;
-    top: 300px;
-    left: 50px;
-    color: #FFFFFF;
-}
-
-.about-main p {
-    position: absolute;
-    top: 450px;
-    left: 50px;
-    color: #FFFFFF;
-    margin: 20px auto;
-    padding-right: 150px;
-    max-width: 1500px;
+/* Hero content */
+.hero-content {
+    position: relative;
+    z-index: 2;
     text-align: left;
+    max-width: 900px;
+    margin-left: 50px;
+    padding: 0 20px;
+    top: 20%;
+    transform: translateY(-50%);
+}
+
+.hero-content h1 {
+    font-family: 'Bubblegum Sans', serif;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
     line-height: 1.7;
 }
 
@@ -185,48 +196,16 @@
     text-decoration: underline;
 }
 
-@media (max-width: 1750px) {
-    .about-main p {
-        padding-right: 300px;
-    }
-}
-
+/* Responsive styling */
 @media (max-width: 1440px) {
-    .about-main {
+    .hero-section {
         background-image: url(/assets/images/about-az-desert-designer-background-medium.webp);
-        height: 800px;
-    }
-
-    .about-main h1 {
-        top: 200px;
-        left: 50px;
-    }
-
-    .about-main p {
-        top: 300px;
-        left: 50px;
-        padding-right: 200px;
-        max-width: 900px;
     }
 }
 
 @media (max-width: 768px) {
-    .about-main {
+    .hero-section {
         background-image: url(/assets/images/about-az-desert-designer-background-small.webp);
-        height: 500px;
-    }
-
-    .about-main h1 {
-        top: 180px;
-        left: 50px;
-    }
-
-    .about-main p {
-        top: 240px;
-        left: 50px;
-        padding-right: 200px;
-        max-width: 900px;
-        font-size: 0.9rem;
     }
 
     .about-break {
@@ -254,29 +233,9 @@
     }
 }
 
-@media (max-width: 610px) {
-    .about-main p {
-        top: 220px;
-        font-size: 0.7rem;
-    }
-}
-
 @media (max-width: 435px) {
-    .about-main {
+    .hero-section {
         background-image: url(/assets/images/about-az-desert-designer-background-mobile.webp);
-        height: 400px;
-    }
-
-    .about-main h1 {
-        top: 120px;
-        left: 30px;
-    }
-
-    .about-main p {
-        top: 140px;
-        left: 30px;
-        font-size: 0.6rem;
-        padding-right: 100px;
     }
 
     .about-break {
