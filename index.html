@@ -68,10 +68,13 @@
 </head>
 
 <body>
-    <header>
+
+    <header class="hero-section">
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="assets/images/az-desert-designer-logo.svg" alt="AZ Desert Designer Logo"></a>
+                <a href="index.html">
+                    <img src="assets/images/az-desert-designer-logo.svg" alt="AZ Desert Designer Logo">
+                </a>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active" aria-current="page">HOME</a></li>
@@ -80,11 +83,20 @@
                 <li><a href="portfolio.html">PORTFOLIO</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
                 <span class="menu-icon">&#9776;</span>
                 <span class="close-icon">&times;</span>
             </div>
         </nav>
+
+        <div class="hero-content">
+            <h1>Transform Your Arizona Yard into a Desert Oasis</h1>
+            <p>Specializing in sustainable, low-water landscape design inspired by the beauty of the desert.</p>
+            <div class="hero-buttons">
+                <a href="services.html" class="btn primary-btn">Our Services</a>
+                <a href="contact.html" class="btn secondary-btn">Get a Quote</a>
+            </div>
+        </div>
     </header>
 
     <section class="services">

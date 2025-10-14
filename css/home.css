@@ -1,99 +1,89 @@
-/* Flexbox layout for main section */
-.main-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    padding: 20px 60px;
-    margin-top: 20px;
-    background-color: var(--primary-color);
-}
-
-/* Text section */
-.text-section {
-    flex: 2;
-    padding-right: 40px;
-}
-
-.text-section h1 {
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.text-section p {
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-/* Button Styles */
-button {
-    padding: 10px 20px;
-    margin: 20px 0;
-    background-color: var(--accent-color);
-    color: #000000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: clamp(1rem, 1.8vw, 1.6rem);
-    transition: background-color var(--transition-speed) ease-in-out;
-}
-  
-button:hover {
-    background-color: var(--accent-color-dark);
-    color: #FFFFFF;
-}
-
-/* Carousel section */
-.carousel-section {
-    display: flex;
-    justify-content: center;
+/* Hero section */
+.hero-section {
     position: relative;
-    max-width: 700px;
-    margin: 0 auto;
-    overflow: hidden; /* Hides content outside the carousel */
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
-
-/* Individual slide styling */
-.carousel-slide {
-    min-width: 100%;
+    background-image: url('/assets/images/hero-desktop.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: var(--accent-color-supalight);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
-.carousel-slide img {
-    width: 700px;
-    height: 525px;
-    object-fit: cover;
-    position: relative;
-}
-
-.carousel-caption {
+/* Overlay for readability */
+.hero-section::before {
+    content: "";
     position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
+    inset: 0;
+    background: linear-gradient(rgba(1, 22, 39, 0.5), rgba(1, 22, 39, 0.8));
+    z-index: 1;
+}
+
+/* Hero content */
+.hero-content {
+    position: relative;
+    z-index: 2;
     text-align: center;
-    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    top: -10%;
+    transform: translateY(-50%);
 }
 
-.carousel-caption h2 {
-    font-size: clamp(1.4rem, 3vw, 2.3rem);
-    margin: 0;
-    font-weight: bold;
+.hero-content h1 {
+    font-family: 'Bubblegum Sans', serif;
+    color: var(--accent-color-supalight);
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 
-.carousel-caption p {
-    margin: 5px 0 0;
+.hero-content p {
+    color: var(--accent-color-light);
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+/* CTA buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    font-family: 'Acme', serif;
+    transition: all var(--transition-speed) ease-in-out;
+}
+
+.primary-btn {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+}
+  
+.primary-btn:hover {
+    background-color: var(--secondary-color-light);
+    transform: scale(1.05);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    transform: scale(1.05);
 }
 
 /* Services Section */
@@ -178,7 +168,7 @@ button:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Testimonials Section */
+/* Testimonials section */
 .testimonials {
     position: relative;
     width: 100%;
@@ -278,7 +268,7 @@ button:hover {
     color: #555;
 }
 
-/* Media query for smaller screens */
+/* Responsive styling */
 @media (max-width: 1765px) {
     .text-section {
         padding-right: 0;
