@@ -39,18 +39,27 @@ body {
 }
 
 @font-face {
-    font-family: 'Domine';
-    src: url('/assets/fonts/Domine-Regular.woff2') format('woff2'),
-         url('/assets/fonts/Domine-Regular.woff') format('woff');
+    font-family: 'Acme';
+    src: url('/assets/fonts/Acme-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Acme-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Acme';
-    src: url('/assets/fonts/Acme-Regular.woff2') format('woff2'),
-        url('/assets/fonts/Acme-Regular.woff') format('woff');
+    font-family: 'Fredoka';
+    src: url('/assets/fonts/Fredoka-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Fredoka-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domine';
+    src: url('/assets/fonts/Domine-Regular.woff2') format('woff2'),
+         url('/assets/fonts/Domine-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -69,7 +78,7 @@ h2 {
 
 h3 {
     font-size: clamp(1.3rem, 3vw, 2rem);
-    font-family: 'Acme', serif;
+    font-family: 'Fredoka', serif;
 }
 
 p {
