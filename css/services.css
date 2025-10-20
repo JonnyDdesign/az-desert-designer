@@ -30,9 +30,7 @@
 }
 
 .main-image img {
-    width: 80%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 8);
+    max-width: 80%;
 }
 
 /* Services section */
@@ -86,7 +84,7 @@
 }
 
 .service-card img {
-    max-width: 100px;
+    max-width: 100%;
     margin: 10px;
 }
 
@@ -109,10 +107,6 @@
 }
 
 @media (max-width: 1440px) {
-    .service-card img {
-        width: 80px;
-    }
-
     .service-card h2 {
         margin-bottom: 10px;
         font-size: 2rem;
