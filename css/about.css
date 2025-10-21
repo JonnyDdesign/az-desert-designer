@@ -60,13 +60,7 @@
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     text-align: left;
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     border-top: 4px solid var(--secondary-color);
-}
-
-.mission-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .mission-card h3 {
