@@ -105,6 +105,7 @@
     padding: 60px 20px;
     border-radius: 8px;
     display: inline-block;
+    max-width: 800px;
 }
 
 .about-break h2 {
@@ -198,14 +199,41 @@
 }
 
 @media (max-width: 768px) {
+    .hamburger {
+        color: #FFFFFF;
+    }
+
     .hero-section {
         background-image: url(/assets/images/about-az-desert-designer-background-small.webp);
+    }
+
+    .hero-content {
+        max-width: 600px;
+        margin-left: 30px;
+        top: 25%;
+    }
+
+    .hero-content p {
+        margin-bottom: 30px;
+        font-size: 1rem;
     }
 
     .about-break {
         background: url(/assets/images/desert-break-tablet.webp);
         min-height: 350px;
-        background-position: center;
+    }
+
+    .about-break .overlay {
+        padding: 40px 20px;
+        max-width: 500px;
+    }
+
+    .about-break h2 {
+        font-size: 2rem;
+    }
+
+    .about-break p {
+        font-size: 1rem;
     }
 
     .about-services li {
@@ -230,6 +258,16 @@
 @media (max-width: 435px) {
     .hero-section {
         background-image: url(/assets/images/about-az-desert-designer-background-mobile.webp);
+    }
+
+    .hero-content {
+        max-width: 400px;
+        margin-left: 10px;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
     }
 
     .about-break {
