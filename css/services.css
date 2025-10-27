@@ -150,8 +150,12 @@
 
 @media (max-width: 435px) {
     .main-section {
-        padding: 20px;
+        padding: 50px 30px 20px 30px;
         gap: 30px;
+    }
+
+    .main-text {
+        padding-right: 0px;
     }
 
     .main-text h1 {
@@ -160,6 +164,7 @@
 
     .main-text p {
         font-size: 1.1rem;
+        text-align: center;
     }
 
     .main-image img {
@@ -181,10 +186,6 @@
 
     .services-flex a {
         flex: 1;
-    }
-
-    .service-card img {
-        width: 75px;
     }
 
     .service-card h3 {
