@@ -68,6 +68,7 @@
     color: #ffffff;
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
     background: rgba(1, 22, 39, 0.2);
     transition: background var(--transition-speed), font-size var(--transition-speed);
 }
