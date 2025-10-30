@@ -6,6 +6,10 @@
     padding: 50px;
 }
 
+.main-text {
+    flex: 1;
+}
+
 .main-text h1 {
     padding-left: 10px;
     font-size: clamp(2.5rem, 5vw, 5rem);
@@ -20,12 +24,15 @@
 
 .main-image {
     display: flex;
+    flex: 0.8;
     justify-content: center;
     align-items: center;
 }
 
 .main-image img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .services-container {
