@@ -97,6 +97,9 @@
 @media (max-width: 860px) {
     .main-section {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .main-text h1 {
