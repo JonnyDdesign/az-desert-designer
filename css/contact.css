@@ -52,6 +52,7 @@
 .contact-form label {
     text-align: left;
     font-weight: 600;
+    font-size: 1.3rem;
     color: #FFFFFF;
 }
   
@@ -76,6 +77,11 @@
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--accent-color-light);
 }
   
 .contact-form button {
@@ -117,12 +123,12 @@
 .contact-info h3 {
     font-size: 1.3rem;
     margin-bottom: 0.3rem;
-    color: #FFFFFF;
+    color: var(--primary-color);
 }
   
 .contact-info p,
 .contact-info a {
-    color: rgba(255, 255, 255, 0.8);
+    color: #FFFFFF;
     font-size: 1rem;
     text-decoration: none;
 }
@@ -150,4 +156,39 @@
         margin: 0;
     }
 }
-  
+
+@media (max-width: 1024px) {
+    .contact-header h1 {
+        font-size: 2.3rem;
+    }
+
+    .contact-header p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 435px) {
+    .contact-header,
+    .contact-form-section,
+    .contact-info-section {
+        padding: 2rem;
+    }
+
+    .contact-form label {
+        font-size: 1.1rem;
+    }
+
+    .contact-info-section {
+        gap: 1.2rem;
+    }
+}
